@@ -10,8 +10,12 @@ namespace FileNameChanger.MVC
     public class Model
     {
         public static List<string> selectedFiles = new List<string>();
+
         public string Prefix = "";
         public string Suffix = "";
+
+        public bool AutoInc = false;
+        public bool AutoABC = false;
         public void RenameFiles(TextBox txtNames)
         {
             var newNames = txtNames.Text
@@ -19,8 +23,8 @@ namespace FileNameChanger.MVC
 
             if (newNames.Length != selectedFiles.Count)
             {
-                MessageBox.Show("The number of new names must match the number of selected files.","Error",
-                    MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("The number of new names must match the number of selected files.", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -37,7 +41,8 @@ namespace FileNameChanger.MVC
                     continue;
                 }
 
-                string newPath = Path.Combine(directory, Prefix + newName +Suffix + extension);
+                // Applying File Names
+                string newPath = Path.Combine(directory,GetFileName(newName,i) + extension);
 
                 try
                 {
@@ -45,12 +50,29 @@ namespace FileNameChanger.MVC
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Failed to rename '{oldPath}': {ex.Message}","Failed",MessageBoxButtons.OK,
+                    MessageBox.Show($"Failed to rename '{oldPath}': {ex.Message}", "Failed", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
             }
 
-            MessageBox.Show("Files renamed successfully.", "Successfull", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Files renamed successfully.", "Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public string GetFileName(string RawName,int index)
+        {
+            string temp = "";
+            index++;
+            if (AutoInc)
+            {
+                temp = index.ToString();
+            }
+            else if(AutoABC)
+            {
+                temp = ((char)('A' + index-1)).ToString();
+            }
+            
+            temp += Prefix + RawName + Suffix;
+
+            return temp;
         }
     }
 }

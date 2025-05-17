@@ -27,8 +27,7 @@ namespace FileNameChanger.MVC
                 List<string> temp = new List<string>();
                 for (int i = 0; i < selectedFiles.Count; i++)
                 {
-
-                    temp.Add(model.Prefix + newNames[i] + model.Suffix + "." + GetFileExtensionOnly(selectedFiles[i]));
+                    temp.Add(model.GetFileName(newNames[i],i) + "." + GetFileExtensionOnly(selectedFiles[i]));
                 }
                 return temp.ToArray();
             }
