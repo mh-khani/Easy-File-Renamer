@@ -3,7 +3,10 @@
 A simple 🎯 C# Windows Forms application that allows users to batch rename multiple files 📁 using custom names entered in a textbox. The app also supports adding 🔤 prefixes and suffixes to filenames.
 
 ---
+
 ![Screenshot](Media/rec.gif)
+
+---
 
 ## ✨ Features
 
