@@ -3,7 +3,10 @@
 A simple 🎯 C# Windows Forms application that allows users to batch rename multiple files 📁 using custom names entered in a textbox. The app also supports adding 🔤 prefixes and suffixes to filenames.
 
 ---
-![Screenshot](screenshots/preview.png)
+
+![Screenshot](Media/rec.gif)
+
+---
 
 ## ✨ Features
 
@@ -25,7 +28,7 @@ A simple 🎯 C# Windows Forms application that allows users to batch rename mul
 📂 **Open Files**: Select multiple files from your system  
 🖊️ **New Names Textbox**: Type the new names, each on a separate line  
 🔠 **Prefix/Suffix Inputs**: Optional text to add before/after names  
-🔍 **Preview**: Shows a list like `oldname.ext → newname.ext`  
+🔍 **Preview**: Shows a list like
 📁 **Change File Names**: Renames all selected files
 
 ---
@@ -37,7 +40,7 @@ A simple 🎯 C# Windows Forms application that allows users to batch rename mul
 3. 📑 Click **Open Files** and select files  
 4. ✏️ Enter new names (one per line) — same count as files  
 5. 🔧 (Optional) Add prefix or suffix  
-6. 👁️ Click **Preview**  
+6. 👁️ See **Preview**  
 7. ✅ Click **Change File Names** to apply
 
 ---
@@ -54,16 +57,10 @@ A simple 🎯 C# Windows Forms application that allows users to batch rename mul
 ⚠️ Extensions are preserved automatically.  
 🚫 Invalid characters like `\ / : * ? " < > |` are not allowed.  
 📛 Files will not be overwritten if a duplicate name exists.  
-👁️ Always use **Preview** to confirm the rename operation.
+👁️ Always See **Preview** to confirm the rename operation.
 
 ---
 
 ## 🪪 License
 
 📄 MIT License – Free to use, modify, and share.
-
----
-
-## 📸 Screenshots (optional)
-
-![Screenshot](screenshots/preview.png)
