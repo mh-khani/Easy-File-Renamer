@@ -86,7 +86,7 @@ namespace FileNameChanger
         #region Events
         private void OpenFilesBt_Click(object sender, EventArgs e) // Initialze Directory Open
         {
-            if (InputNames.Text != "")
+            if (InputNames.Text != "" || Model.selectedFiles.Count != 0)
             {
                 Application.Restart();
             }

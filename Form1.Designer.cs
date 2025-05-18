@@ -70,7 +70,7 @@ namespace FileNameChanger
             OpenFilesBt.Font = new Font("abeatbyKai", 12F);
             OpenFilesBt.Location = new Point(11, 17);
             OpenFilesBt.Name = "OpenFilesBt";
-            OpenFilesBt.Size = new Size(122, 49);
+            OpenFilesBt.Size = new Size(150, 49);
             OpenFilesBt.TabIndex = 1;
             OpenFilesBt.Text = "Open Files";
             OpenFilesBt.UseVisualStyleBackColor = false;
@@ -130,11 +130,11 @@ namespace FileNameChanger
             ChagefileNames.FlatStyle = FlatStyle.Flat;
             ChagefileNames.Font = new Font("abeatbyKai", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ChagefileNames.ForeColor = Color.DimGray;
-            ChagefileNames.Location = new Point(145, 17);
+            ChagefileNames.Location = new Point(168, 17);
             ChagefileNames.Name = "ChagefileNames";
-            ChagefileNames.Size = new Size(168, 49);
+            ChagefileNames.Size = new Size(145, 49);
             ChagefileNames.TabIndex = 6;
-            ChagefileNames.Text = "Chage File Names";
+            ChagefileNames.Text = "Rename Files";
             ChagefileNames.UseVisualStyleBackColor = false;
             ChagefileNames.Click += ChagefileNames_Click;
             // 
