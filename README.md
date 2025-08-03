@@ -1,5 +1,5 @@
 # 🔄 Easy File Renamer – Easily Rename Multiple Files with One Click ✂️🗂️
-
+ 
 A simple 🎯 C# Windows Forms application that allows users to batch rename multiple files 📁 using custom names entered in a textbox. The app also supports adding 🔤 prefixes and suffixes, as well as automatic numbering or lettering.
 
 ---
